@@ -37,7 +37,7 @@
   <h3 align="center">Cross-paradigm assimilation framework unifies data-centric learning and knowledge-guided reasoning</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    The code is comming soon!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
