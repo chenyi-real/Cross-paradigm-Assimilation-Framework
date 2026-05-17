@@ -96,7 +96,7 @@ These files are useful for inspecting the model design without navigating the fu
 
 ## Scripts
 
-The `scripts/` directory contains plotting and result-cleaning utilities.
+The `scripts/` directory contains plotting utilities.
 
 ```text
 scripts/
@@ -106,22 +106,10 @@ scripts/
 `-- Draw_Violin/
     +-- violin_refactoring.py
     +-- violin_refactoring-batch.py
-    `-- cleanup_adjusted_xlsx_and_images.py
 ```
 
 `Draw_Error_Line` is used for error-line and scatter-style visualizations across SOC, SOH, SOP, transfer, and distillation results. `Draw_Violin` is used for violin-plot summaries from Excel result files.
 
-`cleanup_adjusted_xlsx_and_images.py` cleans generated images and normalizes `*_adjusted.xlsx` files under `20260313_exp_data_sum`. It runs in dry-run mode by default:
-
-```bash
-python scripts/Draw_Violin/cleanup_adjusted_xlsx_and_images.py
-```
-
-Apply the changes only after checking the planned actions:
-
-```bash
-python scripts/Draw_Violin/cleanup_adjusted_xlsx_and_images.py --apply
-```
 
 ## Case Study Entry Points
 
