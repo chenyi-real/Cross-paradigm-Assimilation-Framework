@@ -265,9 +265,7 @@ def load_model_results(root_dir: str, model: str, dataset: str, test_id_s):
     返回列包含 ['model', 'metric', 'error'] 的 DataFrame
     """
     possible_paths = [
-        os.path.join(root_dir, f"{model}-{dataset}-results_adjusted.xlsx"),
         os.path.join(root_dir, f"{model}-{dataset}-results.xlsx"),
-        os.path.join(root_dir, f"{model}_adjusted.xlsx"),
         os.path.join(root_dir, f"{model}.xlsx"),
     ]
 
@@ -316,9 +314,7 @@ def load_model_results_avg_over_test_ids(root_dir: str, model: str, dataset: str
     返回列：['model', 'metric', 'error']
     """
     possible_paths = [
-        os.path.join(root_dir, f"{model}-{dataset}-results_adjusted.xlsx"),
         os.path.join(root_dir, f"{model}-{dataset}-results.xlsx"),
-        os.path.join(root_dir, f"{model}_adjusted.xlsx"),
         os.path.join(root_dir, f"{model}.xlsx"),
     ]
 
