@@ -72,7 +72,7 @@ data/
     `-- UDDS/            # UDDS SOH health-indicator XLSX files
 ```
 
-Several case scripts also expect data under paths local to their case directories or historical processed-data paths such as `hyx_data/...`. Before running a script, check the active README and the data-root variables in that case's configuration or entry script.
+Several case scripts also expect data under paths local to their case directories or historical processed-data paths such as `data/...`. Before running a script, check the active README and the data-root variables in that case's configuration or entry script.
 
 Traffic data for `Case2-Traffic/` is expected under:
 
