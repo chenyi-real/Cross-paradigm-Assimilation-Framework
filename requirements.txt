@@ -1,0 +1,30 @@
+# Python 3.10
+#
+# Core scientific stack
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+tqdm
+openpyxl
+joblib
+
+# Deep learning
+# Install the PyTorch build that matches your CUDA/CPU environment.
+torch
+tensorboard
+
+# Traffic-flow metrics and image-quality metrics
+opencv-python
+scikit-image
+phasepack-python
+pyFFTW
+
+# Plotting styles used by scripts/results_analysis
+scienceplots
+
+# Optional spike-neural-network baselines and demos
+snntorch
+spikingjelly

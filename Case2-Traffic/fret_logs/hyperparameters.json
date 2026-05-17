@@ -1,0 +1,12 @@
+[
+    {
+        "embed_size": 128,
+        "hidden_size": 128,
+        "pre_length": 16,
+        "feature_size": 3,
+        "seq_length": 16,
+        "channel_independence": 1,
+        "sparsity_threshold": 0.01,
+        "scale": 0.02
+    }
+]
