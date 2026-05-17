@@ -71,10 +71,10 @@ data/
 Several training scripts currently reference external processed paths such as:
 
 ```text
-hyx_data/NASA/new_out/
-hyx_data/MIT/HIs/
-hyx_data/CALCE/new_out/
-hyx_data/UDDS/csv/
+data/NASA/new_out/
+data/MIT/HIs/
+data/CALCE/new_out/
+data/UDDS/csv/
 ```
 
 Before running experiments, either place the processed CSV/XLSX files at those paths or edit the corresponding `root` variables in the entry script. The dataloader expects health-indicator tables whose last column is the SOH/capacity target. If a `Cycle` column exists, it is removed before model input construction.
