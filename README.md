@@ -1,4 +1,6 @@
-# Cross-Paradigm Assimilation Framework
+# 🐱‍🏍Cross-Paradigm Assimilation Framework
+
+Title: **_Cross-paradigm assimilation framework unifies data-centric learning and knowledge-guided reasoning_**, which has been submitted.
 
 This repository provides the code and supporting materials for a cross-paradigm assimilation framework that combines data-centric learning with knowledge-guided reasoning. The project is organized around battery prediction tasks and traffic-flow prediction tasks, with shared datasets, demo models, and plotting/analysis scripts.
 
