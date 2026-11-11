@@ -872,8 +872,8 @@ class AdaptiveBoundedLoss(nn.Module):
 
 class PINN_debug(nn.Module):
     '''
-    这个版本是在v3的基础上用来加入Spikformer分支继续测试(这个版本的效果感觉还不错)
-    还要用于hyx数据
+    Physics-informed SOH model with CNN and spiking-GRU perception branches.
+    The historical class name is retained for checkpoint compatibility.
     '''
     def __init__(self,args, debug=False):
         super(PINN_debug, self).__init__()
@@ -1280,7 +1280,7 @@ class PINN(nn.Module):
 
 class PINN_v2(nn.Module):
     '''
-    这个版本只是用来测试hyx HIS的效果
+    Physics-informed SOH variant using processed health indicators.
     '''
     def __init__(self,args):
         super(PINN_v2, self).__init__()
@@ -1474,7 +1474,7 @@ class PINN_v2(nn.Module):
 
 class PINN_v3(nn.Module):
     '''
-    这个版本是在v2的基础上用来加入SubMLP分支继续测试
+    Physics-informed SOH variant with a secondary MLP branch.
     '''
     def __init__(self,args):
         super(PINN_v3, self).__init__()
@@ -1668,7 +1668,7 @@ class PINN_v3(nn.Module):
 
 class PINN_v4(nn.Module):
     '''
-    这个版本是在v3的基础上用来加入Spike-SubMLP分支继续测试
+    Physics-informed SOH variant with a spiking secondary MLP branch.
     '''
     def __init__(self,args):
         super(PINN_v4, self).__init__()
@@ -1860,7 +1860,7 @@ class PINN_v4(nn.Module):
 
 class PINN_v5(nn.Module):
     '''
-    这个版本是在v3的基础上用来加入Spikformer分支继续测试(这个版本的效果感觉还不错)
+    Physics-informed SOH variant with a spiking perception branch.
     '''
     def __init__(self,args):
         super(PINN_v5, self).__init__()

@@ -104,7 +104,7 @@ def train_tcn_on_table(df, device=DEVICE, run_id=1, fname=None):
     # model = CNNModel(input_dim=3).to(device)
 
     # Ours
-    model = TwoBranchFramework(WINDOW).to(device)  # Ours
+    model = TwoBranchFramework(exp_dir=os.path.dirname(MODELS_DIR)).to(device)
 
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=1e-2)

@@ -3,7 +3,6 @@ from dataloader.dataloader import XJTUdata,MITdata,HUSTdata,TJUdata
 from Model.Model import PINN, PINN_v2, PINN_v3, PINN_v4, PINN_v5, PINN_debug
 import argparse
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for MIT dataset')
@@ -31,14 +30,14 @@ def get_args():
     parser.add_argument('--beta', type=float, default=0.02, help='loss = l_data + alpha * l_PDE + beta * l_physics')
 
     parser.add_argument('--log_dir', type=str, default='logging.txt', help='log dir, if None, do not save')
-    parser.add_argument('--save_folder', type=str, default='new_results/results of reviewer/MIT results', help='save folder')
+    parser.add_argument('--save_folder', type=str, default='runs/MIT', help='save folder')
 
     args = parser.parse_args()
 
     return args
 
 def load_MIT_data(args,normalization=True,small_sample=None):
-    root = 'hyx_data/MIT/HIs'
+    root = 'data/MIT/HIs'
     # root = 'data/MIT data'
     train_list = []
     test_list = []
@@ -64,7 +63,7 @@ def load_MIT_data(args,normalization=True,small_sample=None):
 def main():
     args = get_args()
     for e in range(10):
-        setattr(args, 'save_folder', f'new_results_test_need_rm/results of PINNdebug/MIT results/Experiment{e + 1}')
+        setattr(args, 'save_folder', f'runs/MIT/Experiment{e + 1}')
         if not os.path.exists(args.save_folder):
             os.makedirs(args.save_folder)
 
@@ -72,20 +71,7 @@ def main():
         pinn = PINN_debug(args, debug=True)
         pinn.Train(trainloader=dataloader['train'],validloader=dataloader['valid'],testloader=dataloader['test'])
 
-# def small_sample():
-#     args = get_args()
-#     num_battery = 2
-#     for e in range(10):
-#         setattr(args, 'save_folder',
-#                 f'results of reviewer/MIT results (small sample {num_battery})/Experiment{e + 1}')
-#         setattr(args, 'batch_size', 128)
-#         if not os.path.exists(args.save_folder):
-#             os.makedirs(args.save_folder)
-#         dataloader = load_MIT_data(args, small_sample=num_battery)
-#         pinn = PINN(args)
-#         pinn.Train(trainloader=dataloader['train'], validloader=dataloader['valid'], testloader=dataloader['test'])
 
 
 if __name__ == '__main__':
-    print(1)
     main()
