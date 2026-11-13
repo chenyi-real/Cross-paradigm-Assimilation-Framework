@@ -12,9 +12,19 @@ Case1-SOP/
 +-- main.py                # Main experiment entry point
 +-- model.py               # Baseline and two-branch model definitions
 +-- train.py               # Training, validation, testing, and metric utilities
++-- results/               # Reported result spreadsheets, grouped by table
 +-- requirements.txt       # Python dependencies
 `-- README.md
 ```
+
+Reported spreadsheets are collected under `results/`. The original `TABLE/`
+directory has moved intact to `results/TABLE/`; the additional table groups
+(`TABLE12`, `TABLE14`, `TABLE17`, `TABLE22`, `TABLE23`, `TABLE26`, `TABLE31`,
+`TABLE35`, `TABLE36`, `TABLE39`, `TABLE40`, `TABLE42`, `TABLE43`, and `TABLE49`)
+are stored directly under `results/`. Original filenames and numerical contents
+are preserved. The archived and additional table groups retain their respective
+numbering; the directory move does not assert that old and new table numbers
+refer to the same experiment. Training output conventions below are unchanged.
 
 Expected data directories are referenced in `config.py`:
 

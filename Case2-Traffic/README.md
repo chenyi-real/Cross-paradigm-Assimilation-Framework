@@ -18,7 +18,12 @@ Case2-Traffic/
 +-- quality_metrics.py                   # MSE, RMSE, MAE, MAPE, PSNR, FSIM, etc.
 +-- utils.py                             # Config, optimizer, and helper utilities
 +-- requirements.txt                     # Python dependencies
-+-- Result-*/                            # Reported Excel results
++-- results/                             # Reported Excel results
+|   +-- Result-*/                        # Existing baseline and ablation groups
+|   +-- Validity analiysis-*/             # Existing validity-analysis groups
+|   +-- Table45/                         # Additional reported table group
+|   +-- Table47/                         # Additional reported table group
+|   `-- Table48/                         # Additional reported table group
 +-- loss_curve/                          # Loss-curve figures
 +-- violin_map/                          # Violin-plot figures
 `-- README.md
@@ -123,4 +128,5 @@ Metrics include MSE, RMSE, MAE, MAPE, PSNR, and FSIM. The prediction heatmap is 
 
 - CUDA is used automatically when available.
 - If `configs/common.json` is missing, `main.py` creates a default copy.
-- The existing `Result-*`, `loss_curve/`, and `violin_map/` directories contain reported results and figures for baseline, ablation, and validity analysis experiments.
+- Existing `Result-*` and `Validity analiysis-*` spreadsheet directories have moved intact under `results/`. Additional spreadsheet groups are in `results/Table45`, `results/Table47`, and `results/Table48`. Original filenames and numerical contents are preserved.
+- `loss_curve/` and `violin_map/` retain their original locations and contain the existing figures. Model, training and configuration paths are unchanged.
